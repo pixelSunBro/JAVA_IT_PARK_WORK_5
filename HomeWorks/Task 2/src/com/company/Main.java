@@ -10,65 +10,51 @@ public class Main {
 
         while (true) {
             System.out.println("MENU");
-            System.out.println("1. Указать диапозон и вывести на экран его четные числа");
-            System.out.println("2. Получить сумму веденных чисел");
-            System.out.println("3. Получить разность веденных чисел");
-            System.out.println("4. Получить произведение веденных чисел");
-            System.out.println("5. Получить частное веденных чисел");
+            System.out.println("1. Указать диапазон и вывести на экран его четные числа");
+            System.out.println("2. Указать диапазон и узнать сумму его чисел");
 
             int command = scanner.nextInt();
             switch (command) {
                 case 1: {
-                    System.out.println("Ведите первое число диапозона: ");
+                    System.out.println("Ведите первое число диапазон: ");
                     int firstNum = scanner.nextInt();
-                    System.out.println("Введите последние число диапозона: ");
+                    System.out.println("Введите последние число диапазон: ");
                     int lastNum = scanner.nextInt();
+                    int sumNum = firstNum + lastNum;
                     for (int i = firstNum; i <= lastNum; i++) {
                         if (i % 2 == 0) {
                             System.out.print(i + " ");
                         }
                     }
                     System.out.println("");
+                    System.out.println("1. Показать сумму введенных чисел: ");
+                    System.out.println("2. Начать заново");
+                    int command2 = scanner.nextInt();
+                    switch (command2) {
+                        case 1: {
+                            System.out.println("Сумма введеных чисел равна: " + sumNum);
+                            break;
+                        }
+
+                        case 2:
+                            continue;
+                    }
                     break;
                 }
 
                 case 2: {
-                    System.out.println("Ведите первое число: ");
-                    int a = scanner.nextInt();
-                    System.out.println("Ведите второе число: ");
-                    int b = scanner.nextInt();
-                    int sumNum = a + b;
-                    System.out.println("Сумма чисел = " + sumNum);
-                    break;
-                }
+                    System.out.println("Ведите первое число диапазон: ");
+                    int firstNum = scanner.nextInt();
+                    System.out.println("Введите последние число диапазон: ");
+                    int lastNum = scanner.nextInt();
 
-                case 3: {
-                    System.out.println("Ведите первое число: ");
-                    int a = scanner.nextInt();
-                    System.out.println("Ведите второе число: ");
-                    int b = scanner.nextInt();
-                    int sumNum = a - b;
-                    System.out.println("Разность чисел = " + sumNum);
-                    break;
-                }
-
-                case 4: {
-                    System.out.println("Ведите первое число: ");
-                    int a = scanner.nextInt();
-                    System.out.println("Ведите второе число: ");
-                    int b = scanner.nextInt();
-                    int sumNum = a * b;
-                    System.out.println("Произведение чисел = " + sumNum);
-                    break;
-                }
-
-                case 5: {
-                    System.out.println("Ведите первое число: ");
-                    int a = scanner.nextInt();
-                    System.out.println("Ведите второе число: ");
-                    int b = scanner.nextInt();
-                    int sumNum = a / b;
-                    System.out.println("Частное чисел = " + sumNum);
+                    long b = 0;
+                    for (int i = firstNum; i <= lastNum; i++) {
+                        b = b + i;
+                        if (i == lastNum) {
+                            System.out.println(b);
+                        }
+                    }
                     break;
                 }
 
