@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Main {
     public static int parse(char input[]) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Пожалуйста, введите размер массива еще раз");//я не смог сделать перемнную
+        System.out.println("Пожалуйста, введите размер массива еще раз");//я не смог сделать общую перемнную
         int power = scanner.nextInt();
         int sum = 0;
         for (int i = 0; i < input.length; i++) {
