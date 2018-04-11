@@ -16,7 +16,8 @@ public class Main {
             System.out.println();
 
             int command = scanner.nextInt();
-            switch (command) { 
+            switch (command) {
+                case 1: {
                     System.out.println("Введите радус круга: ");
                     double radius = scanner.nextDouble();
                     Circle circle = new Circle(radius);
