@@ -16,7 +16,7 @@ public class Main {
             System.out.println();
 
             double command = scanner.nextDouble();
-            switch ((int) command) {
+            switch ((int) command) { // Не понял почему требуется явная инициализация
                 case 1: {
                     System.out.println("Введите радус круга: ");
                     double radius = scanner.nextDouble();
