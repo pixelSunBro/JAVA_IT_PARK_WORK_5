@@ -16,7 +16,7 @@ public class Main {
         System.out.println("Введите знаменатель: ");
         int denominator = scanner.nextInt();
         System.out.println(rationalNumber.nod(numerator, denominator));
-        rationalNumber.optomize();
-
+        rationalNumber.optimize();
+        System.out.println();
     }
 }

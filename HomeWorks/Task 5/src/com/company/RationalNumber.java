@@ -30,8 +30,7 @@ public class RationalNumber {
         return a + b;
     }
 
-
-    void optomize() {
+    void optimize() {
         System.out.println(x + "/" + y + " = " + x / nod(x, y) + "/" + y / nod(x, y) + " = " + toDouble());
     }
 }
